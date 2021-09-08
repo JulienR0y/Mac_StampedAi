@@ -38,6 +38,7 @@ movies = {
   
     when "update"
       puts "Insert the name of the movie that you want to update its rating"
+      movies.each {|movie, rating| puts "#{movie}: #{rating}"}
       title = gets.chomp
         if movies[title.gsub(/\s+/, "_").to_sym].nil?
           puts "This movie is not in the list"
