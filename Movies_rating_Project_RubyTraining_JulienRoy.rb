@@ -1,4 +1,4 @@
-Run movies = {
+movies = {
     The_Phantom_Menace: 2.5,
     The_Clone_Wars: 3,
     The_Revenge_Of_The_Sith:  4,
