@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <body>
+    <html style='background-color: black'>
+  <div id="roy_j" style= "background-color: blue; border-radius: 3px; position: absolute; left: 0px; top: 0px; min-width: 100px; min-height: 100px; text-align: center; font-weight: bold; color: #999;" >Not loaded</div>
+  <script type="text/javascript">
+    //var t = setInterval(move,300);
+   
+    var box2 = document.getElementById("roy_j");
+    const FPS = 100;
+    let posLeft = 10;
+    let posTop = 10;
+    let posLeftSpeed = 10;
+    let posTopSpeed = 10;
+
+    function refresh(){
+        box2.style.left = posLeft + 'px';
+        box2.style.top = posTop + 'px';
+    }
+
+    setInterval(()=>{
+        if(posLeft + box2.clientWidth >= window.innerWidth || posLeft <= 0){
+            posLeftSpeed = -posLeftSpeed;
+
+
+        }
+        if(posTop + box2.clientWidth >= window.innerHeight|| posTop <= 0){
+            posTopSpeed = -posTopSpeed;
+        }
+        posLeft += posLeftSpeed;
+        posTop += posTopSpeed;
+        refresh();
+    }, 2000/FPS)
+    
+    
+   
+
+        
+    
+    </script>
+    </body>
+</html>
